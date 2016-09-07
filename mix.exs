@@ -53,7 +53,6 @@ defmodule Blogex.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:earmark, "~> 1.0.1"},
-      {:exrm, "~> 1.0.8"},
     ]
   end
 
