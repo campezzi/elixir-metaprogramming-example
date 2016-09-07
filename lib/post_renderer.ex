@@ -1,6 +1,6 @@
 defmodule Blogex.PostRenderer do
   posts_directory = "./posts"
-  
+
   render_file = fn file ->
     "#{posts_directory}/#{file}"
     |> File.read!
