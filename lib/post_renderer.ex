@@ -1,10 +1,13 @@
 defmodule Blogex.PostRenderer do
+  require Blogex.PrismRenderer
+  alias Earmark.Options
+
   posts_directory = "./posts"
 
   render_file = fn file ->
     "#{posts_directory}/#{file}"
     |> File.read!
-    |> Earmark.to_html
+    |> Earmark.to_html(%Options{renderer: Blogex.PrismRenderer})
     |> (&{:safe, &1}).()
   end
 
